@@ -1,4 +1,4 @@
-.PHONY: all install check-python test format limit refactor
+.PHONY: all install check-python test format lint limit refactor
 
 # Prefer python3 on macOS, fall back to python when available.
 PYTHON ?= $(shell command -v python3 2>/dev/null || command -v python 2>/dev/null)
@@ -16,7 +16,7 @@ install:
 	@$(MAKE) check-python
 	$(PIP) install -r requirements.txt
 
-all: test format limit refactor
+all: test format lint refactor
 
 test:
 	@echo "Running tests..."
@@ -25,16 +25,18 @@ test:
 
 format:
 	@echo "Formatting code..."
-	black .
-	isort .
+	$(PYTHON) -m black hello.py test_hello.py
+	$(PYTHON) -m isort hello.py test_hello.py
 
-limit:
+lint:
 	@echo "Checking linting and limits..."
 	# check style and enforce max line length
-	flake8 --max-line-length=88 .
+	$(PYTHON) -m flake8 --max-line-length=88 hello.py test_hello.py
+
+limit: lint
 
 refactor:
 	@echo "Refactoring / cleaning imports..."
 	# remove unused imports/vars and try automated fixes
-	autoflake --in-place --remove-unused-variables --remove-all-unused-imports -r . || true
-	ruff fix . || true
+	$(PYTHON) -m autoflake --in-place --remove-unused-variables --remove-all-unused-imports -r hello.py test_hello.py || true
+	$(PYTHON) -m ruff check --fix hello.py test_hello.py || true

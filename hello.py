@@ -34,24 +34,24 @@ def pow(a, b):
 
 class Calculator:
     """Simple calculator class with basic operations"""
-    
+
     def __init__(self):
         pass
-    
+
     def add(self, a, b):
         return add(a, b)
-    
+
     def subtract(self, a, b):
         return subtract(a, b)
-    
+
     def multiply(self, a, b):
         return multiply(a, b)
-    
+
     def divide(self, a, b):
         return divide(a, b)
-    
+
     def mod(self, a, b):
         return mod(a, b)
-    
+
     def pow(self, a, b):
         return pow(a, b)

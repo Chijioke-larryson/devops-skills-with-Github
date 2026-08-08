@@ -3,3 +3,8 @@ click
 pytest
 pytest-cov
 fastapi
+black
+isort
+flake8
+autoflake
+ruff
