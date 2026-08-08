@@ -1,48 +1,54 @@
 # DevOps Skills with GitHub
 
-This repository is a simple starter project for practicing DevOps-style workflows with GitHub, Python, and common quality tools.
+This repository is a lightweight starter project for practicing DevOps workflows with GitHub, Python, and common automation tools.
 
-## Overview
+## What’s in this project
 
-The project includes:
-- A Python dependency list in requirements.txt
-- A Makefile with common development commands
-- Basic tooling for testing, formatting, linting, and refactoring
+- A simple Python script in [hello.py](hello.py)
+- A dependency list in [requirements.txt](requirements.txt)
+- A [Makefile](Makefile) with useful development commands
+- Basic tooling for testing, formatting, linting, and cleanup
 
 ## Prerequisites
 
-- Python 3.8+
+- Python 3.8 or newer
 - pip
 
-## Getting Started
+## Getting started
 
-Install the required dependencies:
+Install dependencies:
 
 ```bash
 make install
 ```
 
-Or manually:
+You can also install them directly:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Available Commands
+Run the example script:
 
-The Makefile provides these helper targets:
+```bash
+python hello.py
+```
+
+## Useful commands
+
+The Makefile includes the following targets:
 
 ```bash
 make test        # Run the test suite
 make format      # Format code with Black and isort
-make limit       # Check linting and line length constraints
+make limit       # Check linting and line length rules
 make refactor    # Run automated cleanup tools
 ```
 
-## Project Notes
+## Purpose
 
-This repository is intentionally lightweight and is meant to be used as a learning or demo project for:
-- GitHub-based workflows
-- Python environment setup
+This repository is intended as a simple learning environment for:
+- GitHub-based collaboration
+- Python project setup
 - Automated quality checks
-- Basic DevOps automation practices
+- Basic DevOps practices
