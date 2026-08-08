@@ -3,17 +3,17 @@ def add(a, b):
     return a + b
 
 
-def sub(a, b):
+def subtract(a, b):
     """Subtract two numbers"""
     return a - b
 
 
-def mul(a, b):
+def multiply(a, b):
     """Multiply two numbers"""
     return a * b
 
 
-def div(a, b):
+def divide(a, b):
     """Divide two numbers"""
     if b == 0:
         raise ValueError("Cannot divide by zero")
@@ -41,14 +41,14 @@ class Calculator:
     def add(self, a, b):
         return add(a, b)
     
-    def sub(self, a, b):
-        return sub(a, b)
+    def subtract(self, a, b):
+        return subtract(a, b)
     
-    def mul(self, a, b):
-        return mul(a, b)
+    def multiply(self, a, b):
+        return multiply(a, b)
     
-    def div(self, a, b):
-        return div(a, b)
+    def divide(self, a, b):
+        return divide(a, b)
     
     def mod(self, a, b):
         return mod(a, b)
