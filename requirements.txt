@@ -3,7 +3,7 @@ click
 pytest
 pytest-cov
 fastapi
-black
+i88-9black
 isort
 flake8
 autoflake

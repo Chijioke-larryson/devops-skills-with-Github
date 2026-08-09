@@ -29,7 +29,7 @@ def mod(a, b):
 
 def pow(a, b):
     """Raise a to the power of b"""
-    return a ** b
+    return a**b
 
 
 class Calculator:

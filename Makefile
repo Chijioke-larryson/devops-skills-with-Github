@@ -18,6 +18,9 @@ install:
 
 all: test format lint refactor
 
+deploy: 
+	#echo "deploy goes here"
+
 test:
 	@echo "Running tests..."
 	@$(MAKE) check-python
